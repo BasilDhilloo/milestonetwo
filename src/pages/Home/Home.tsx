@@ -19,11 +19,7 @@ const Home: React.FC = () => {
           <IonButton routerLink='/register' color='secondary'> Register </IonButton>
         </div>
       </IonContent>
-      {/* <IonFooter>
-        <IonText>
-          Footer
-        </IonText>
-      </IonFooter> */}
+  
     </IonPage>
   );
 };

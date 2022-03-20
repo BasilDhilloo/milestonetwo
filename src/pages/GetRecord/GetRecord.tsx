@@ -1,12 +1,12 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useState  ,useEffect } from 'react';
 import Header from '../Header/Header';
-import './Dashboard.css';
+import './GetRecord.css';
 import fireDb from '../../firebaseConfig';
 import { Link } from 'react-router-dom';
 
 
-const Dashboard: React.FC = () => {
+const GetRecord: React.FC = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -37,10 +37,10 @@ const Dashboard: React.FC = () => {
             <thead>
               <tr>
                 <th style={{textAlign: "center"}}> No. </th>
-                <th style={{textAlign: "center"}}> Name </th>
-                <th style={{textAlign: "center"}}> Email </th>
-                <th style={{textAlign: "center"}}> Contact </th>
-                <th style={{textAlign: "center"}}> Action </th>
+                <th style={{textAlign: "center"}}> Blood Pressure </th>
+                <th style={{textAlign: "center"}}> Respiratory Rate </th>
+                <th style={{textAlign: "center"}}> Blood Oxygen </th>
+                <th style={{textAlign: "center"}}> HeartBeat Rate </th>
               </tr>
             </thead>
             <tbody>
@@ -48,9 +48,9 @@ const Dashboard: React.FC = () => {
                 return (
                   <tr key={id}>
                       <th scope="row">{index + 1}</th>
-                      <td> {data[id].name}</td>
+                      {/* <td> {data[id].Blood Pressure}</td>
                       <td> {data[id].email}</td>
-                      <td> {data[id].contact}</td>
+                      <td> {data[id].contact}</td> */}
                   </tr>
                 );
               })}
@@ -126,4 +126,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default GetRecord;

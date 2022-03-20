@@ -9,12 +9,16 @@ const Header: React.FC = () => {
     const location = useLocation();
 
     useEffect(()=>{
-        if(location.pathname === "/"){
-            setActiveTab("Home")
-        }else if(location.pathname === "/add"){
+        if(location.pathname === "/startUp"){
+            setActiveTab("startUp")
+        }else if(location.pathname === "/addUser"){
             setActiveTab("addUser")
-        }else if(location.pathname === "/about"){
-            setActiveTab("About")
+        }else if(location.pathname === "/getUser"){
+            setActiveTab("getUser")
+        }else if(location.pathname === "/addRecord"){
+            setActiveTab("addRecord")
+        }else if(location.pathname === "/getRecord"){
+            setActiveTab("getRecord")
         }
     },[location]);
 
@@ -22,23 +26,35 @@ const Header: React.FC = () => {
         <div className='header'> 
             <img src={logo} className='logo' />
             <div className='header-right'> 
-                <Link to="/">
+                <Link to="/startUp">
                     <p
                     className={`${activeTab === "Home" ? "active" : ""}`}
                     onClick={() => setActiveTab("Home")}  
                 > Home </p>
                 </Link>
-                <Link to="/add">
+                <Link to="/addUser">
                     <p
                     className={`${activeTab === "addUser" ? "active" : ""}`}
                     onClick={() => setActiveTab("addUser")}  
                 > Add Patient  </p>
                 </Link>
-                <Link to="/about">
+                <Link to="/getUser">
                     <p
-                    className={`${activeTab === "About" ? "active" : ""}`}
-                    onClick={() => setActiveTab("About")}  
-                > View </p>
+                    className={`${activeTab === "getUser" ? "active" : ""}`}
+                    onClick={() => setActiveTab("getUser")}  
+                > Get User </p>
+                </Link>
+                <Link to="/addrecord">
+                    <p
+                    className={`${activeTab === "addRecord" ? "active" : ""}`}
+                    onClick={() => setActiveTab("addRecord")}  
+                > Add Record </p>
+                </Link>
+                <Link to="/getRecord">
+                    <p
+                    className={`${activeTab === "getRecord" ? "active" : ""}`}
+                    onClick={() => setActiveTab("getRecord")}  
+                > Get Record </p>
                 </Link>
             </div>
         </div>

@@ -44,7 +44,7 @@ const Register: React.FC = () => {
         placeholder='Confirm Password'
         onIonChange={( e: any) => setCpassword(e.target.value)}
         />
-      <IonButton onClick={register}> Register </IonButton>
+      <IonButton onClick={register}routerLink="/startup"> Register </IonButton>
       <p>Already have an account! <Link to="/login"> Login </Link></p>
       </IonContent>
     </IonPage>

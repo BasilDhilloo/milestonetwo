@@ -2,7 +2,10 @@ import firebase from 'firebase/compat/app';
 import "firebase/compat/database";
 import { toast } from "react-toastify";
 
+import 'firebase/compat/auth';
+import 'firebase/compat/analytics';
 
+//database connection variables
 var config = {
     apiKey: "AIzaSyCkmePcx4YIGJtG8_FNP9XadUOLGdpKL6A",
     authDomain: "mapd722-project.firebaseapp.com",
@@ -15,16 +18,20 @@ var config = {
 
 firebase.initializeApp(config)
 const fireDb = firebase.database().ref()
+//const dbref = firebase.database().ref('mapd722-project-default-rtdb/') 
+
 export default fireDb;
 
 export async function loginUser(username: string, password : string){
     const email = `${username}@mapd724.com`
     try{
         const res =   await firebase.auth().signInWithEmailAndPassword(email, password)
+        toast("user loged in")
         console.log(res)
         return true
     }
-    catch(error){
+    catch(error: any){
+        toast(error.message)
         console.log(error)
         return false 
     }
@@ -44,3 +51,11 @@ export async function registerUser(username: string, password : string){
         return false 
     }
 }
+
+// export async function readFromDb(){
+//     // Extract Firebase collection to array
+//     dbref.on('value', resp => {
+//         let data: any[] = snapshotToArray(resp)
+  
+
+//}

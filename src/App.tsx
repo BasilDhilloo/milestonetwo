@@ -4,7 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Dashboard from './pages/Dashboard/Dashboard';
+import GetUser from './pages/GetUser/GetUser';
 import {ToastContainer} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
@@ -28,6 +28,9 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Header from './pages/Header/Header';
 import AddUser from './pages/AddUser/AddUser';
+import StartUp from './pages/StartUp/StartUp';
+import AddRecord from './pages/AddRecord/AddRecord';
+import GetRecord from './pages/GetRecord/GetRecord';
 
 setupIonicReact();
 
@@ -36,12 +39,18 @@ const App: React.FC = () => (
     <ToastContainer position='top-center' />
     <IonReactRouter>
       <IonRouterOutlet>
+
         <Route exact path="/"> <Home /> </Route>
-        <Route exact path="/login"> <Login /> </Route>
+        <Route exact path="/startUp"> <StartUp/> </Route>
         <Route exact path="/register"> <Register /> </Route>
-        <Route exact path="/dashboard"> <Dashboard /> </Route>
-        <Route exact path="/add"> <AddUser /> </Route>
-        <Route exact path="/about"> <Dashboard /> </Route>
+        <Route exact path="/login"> <Login /> </Route>
+
+        <Route exact path="/addRecord"> <AddRecord /> </Route>
+        <Route exact path="/getRecord"> <GetRecord /> </Route>
+        
+        <Route exact path="/addUser"> <AddUser /> </Route>
+        <Route exact path="/getUser"> <GetUser /> </Route>
+
     
       </IonRouterOutlet>
     </IonReactRouter>

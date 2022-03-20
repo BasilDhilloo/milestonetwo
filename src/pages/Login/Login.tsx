@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import { loginUser } from '../../firebaseConfig';
-import Dashboard from '../Dashboard/Dashboard';
+import GetUser from '../GetUser/GetUser';
 import Register from '../Register/Register';
 import Header from '../Header/Header';
 // import { toast } from '../toast';
@@ -44,7 +44,7 @@ const Login: React.FC = () => {
         placeholder='Password'
         onIonChange={( e: any) => setPassword(e.target.value)}
         />
-      <IonButton onClick={login}> Login </IonButton>
+      <IonButton  onClick={login} routerLink="/startup">Log in</IonButton>
       <p>New User! <Link to="/register"> Register </Link></p>
 
       </IonContent>
