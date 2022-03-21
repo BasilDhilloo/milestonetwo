@@ -37,28 +37,19 @@ const GetRecord: React.FC = () => {
             <thead>
               <tr>
                 <th style={{textAlign: "center"}}> No. </th>
-                <th style={{textAlign: "center"}}> Blood Pressure </th>
-                <th style={{textAlign: "center"}}> Respiratory Rate </th>
-                <th style={{textAlign: "center"}}> Blood Oxygen </th>
-                <th style={{textAlign: "center"}}> HeartBeat Rate </th>
+                <th style={{textAlign: "center"}}> BPressure </th>
+                <th style={{textAlign: "center"}}> ResRate </th>
+                <th style={{textAlign: "center"}}> BOxygen </th>
+                <th style={{textAlign: "center"}}> HBRate </th>
               </tr>
             </thead>
             <tbody>
-              {Object.keys(data).map((id, index) => {
-                return (
-                  <tr key={id}>
-                      <th scope="row">{index + 1}</th>
-                      {/* <td> {data[id].Blood Pressure}</td>
-                      <td> {data[id].email}</td>
-                      <td> {data[id].contact}</td> */}
-                  </tr>
-                );
-              })}
+             
               <tr>
                   <th> 1 </th>
-                  <td> Basil</td>
-                  <td> basil@gmail.com</td>
-                  <td> 36876876873</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
                   <td>
                     {/* <Link to={`/update/${id}`}> */}
                     <Link to={`/update`}>
@@ -72,9 +63,9 @@ const GetRecord: React.FC = () => {
               </tr>
               <tr>
                   <th> 2 </th>
-                  <td> Mathew</td>
-                  <td> MAthew@gmail.com</td>
-                  <td> 467362783</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
                   <td>
                     {/* <Link to={`/update/${id}`}> */}
                     <Link to={`/update`}>
@@ -88,9 +79,9 @@ const GetRecord: React.FC = () => {
               </tr>
               <tr>
                   <th> 3 </th>
-                  <td> Joe</td>
-                  <td> joe@gmail.com</td>
-                  <td> 3010193183</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
                   <td>
                     {/* <Link to={`/update/${id}`}> */}
                     <Link to={`/update`}>
@@ -104,9 +95,9 @@ const GetRecord: React.FC = () => {
               </tr>
               <tr>
                   <th> 4 </th>
-                  <td> Rina</td>
-                  <td> rina@gmail.com</td>
-                  <td> 46246526846</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
+                  <td> 23gh</td>
                   <td>
                     {/* <Link to={`/update/${id}`}> */}
                     <Link to={`/update`}>

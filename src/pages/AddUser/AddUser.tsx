@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import Header from '../Header/Header';
 import { useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './AddUser.css';
 import fireDb from "../../firebaseConfig"
 import { toast } from "react-toastify";

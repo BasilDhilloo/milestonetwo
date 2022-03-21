@@ -14,10 +14,13 @@ const initialState = {
 }
 
 const AddRecord: React.FC = () => {
-    const [state, setState] = useState(initialState);
-    const [data, setData] = useState({});
+
+  //const [bloodPressure, setBPressure] = useState<string>();
+  //const [text, setText] = useState<string>();
+  const [state, setState] = useState(initialState);
+    // const [data, setData] = useState({});
   
-    const {bloodPressure, respiratoryRate, bloodOxygen, heartBeatRate} = state;
+    const {bloodPressure , respiratoryRate, bloodOxygen, heartBeatRate} = state;
 
     const history = useHistory();
 
@@ -28,13 +31,13 @@ const AddRecord: React.FC = () => {
     };
 
 
-    //Need more work
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
+    //
+    const handleSubmit = (a: any) => {
+        a.preventDefault();
         if(!bloodPressure || !respiratoryRate || !bloodOxygen || !heartBeatRate){
             toast.error("Please enter a value for all details")
         }else{
-            fireDb.child("records").push(state, (err: any) => {
+            fireDb.child("users").push(state, (err: any) => {
                 if(err){
                     toast.error(err)
                 }else{
@@ -70,7 +73,7 @@ const AddRecord: React.FC = () => {
                 id="bPressure"
                 name="bPressure"
                 placeholder='Enter Your Name'
-                value={bloodPressure}
+                //value={bloodPressure}
                 onChange={handleInputChange}
                 />
 
@@ -80,7 +83,7 @@ const AddRecord: React.FC = () => {
                 id="rRate"
                 name="rRate"
                 placeholder='Enter Your Email'
-                value={respiratoryRate}
+                //value={respiratoryRate}
                 onChange={handleInputChange}
                 />
 
@@ -90,8 +93,9 @@ const AddRecord: React.FC = () => {
                 id="bOxygen"
                 name="bOxygen"
                 placeholder='Enter Your Contact#'
-                value={bloodOxygen}
+                //value={bloodOxygen}
                 onChange={handleInputChange}
+                value ={state.bloodOxygen}
                 />
                 
                 <label htmlFor='hbRate'>HeartBeatRate</label>
@@ -100,7 +104,7 @@ const AddRecord: React.FC = () => {
                 id="hbRate"
                 name="hbRate"
                 placeholder='Enter Your Contact#'
-                value={heartBeatRate}
+                //value={heartBeatRate}
                 onChange={handleInputChange}
                 />
                 <input type="submit" value="Save" />
