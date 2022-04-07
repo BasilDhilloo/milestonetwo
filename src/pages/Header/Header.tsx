@@ -4,6 +4,9 @@ import "./Header.css"
 import { useEffect, useState } from 'react';
 import logo from "./../../images/logo.png"
 
+
+// Milestone - 4
+
 const Header: React.FC = () => {
     const [activeTab, setActiveTab] = useState("Home")
     const location = useLocation();

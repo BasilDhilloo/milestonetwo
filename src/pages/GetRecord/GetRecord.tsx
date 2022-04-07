@@ -6,6 +6,8 @@ import fireDb from '../../firebaseConfig';
 import { Link } from 'react-router-dom';
 
 
+//  // Milestone-4
+
 const GetRecord: React.FC = () => {
   const [data, setData] = useState({});
 
